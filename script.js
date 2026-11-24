@@ -134,8 +134,9 @@
     }
   } catch (_) {}
 
+  /* Short bookmarklet – loads panel script from jsDelivr (reliable on iPad) */
   var BM =
-    "javascript:(function(){var s=document.createElement('script');s.src='https://jsg1049294-png.github.io/YouTube-Video/bookmarklet.js?t='+Date.now();document.documentElement.appendChild(s);})();";
+    "javascript:(function(){var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/jsg1049294-png/YouTube-Video@main/bookmarklet.js';document.documentElement.appendChild(s);})();";
 
   var bmTa = document.getElementById("bm-code");
   if (bmTa) bmTa.value = BM;
