@@ -129,11 +129,14 @@ html, body {
 }
 .bm-box summary { cursor: pointer; font-weight: 600; font-size: 13px; color: var(--accent); }
 .muted-sm { color: var(--muted); font-size: 12px; margin: 8px 0; line-height: 1.4; }
-.limit-box {
-  margin-top: 14px; padding: 10px 12px;
-  background: rgba(255,77,109,.06); border: 1px solid rgba(255,77,109,.22);
-  border-radius: 10px; font-size: 12px; color: #ffb3c0; line-height: 1.45;
+.bm-steps {
+  margin: 10px 0 10px 18px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.55;
 }
+.bm-steps li { margin-bottom: 4px; }
+.bm-steps strong { color: var(--text); }
 @media (max-width: 600px) {
   .ytv-window { width: 100vw; max-height: 100dvh; top: 0; left: 0; transform: none; border-radius: 0; }
 }
