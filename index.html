@@ -19,20 +19,20 @@
         <strong>YouTube Video</strong>
       </div>
       <div class="ytv-win-btns">
-        <button id="ytv-min" class="win-btn" title="Minimieren">−</button>
-        <button id="ytv-close" class="win-btn win-close" title="Schließen">×</button>
+        <button id="ytv-min" class="win-btn" type="button" title="Minimieren">−</button>
+        <button id="ytv-close" class="win-btn win-close" type="button" title="Schließen">×</button>
       </div>
     </header>
 
     <div class="ytv-body">
-      <p class="hint">Embed-Code von YouTube einfügen: Teilen → Einbetten → Code kopieren → hier einfügen.</p>
+      <p class="hint">YouTube → Teilen → Einbetten → Code kopieren → hier einfügen. Oder nur den normalen YouTube-Link.</p>
 
-      <label class="lab" for="embed-input">Embed-Code</label>
-      <textarea id="embed-input" class="embed-input" rows="5" placeholder='<iframe width="560" height="315" src="https://www.youtube.com/embed/..."></iframe>'></textarea>
+      <label class="lab" for="embed-input">Embed-Code oder Link</label>
+      <textarea id="embed-input" class="embed-input" rows="5" placeholder="iframe-Code oder https://www.youtube.com/watch?v=…"></textarea>
 
       <div class="btn-row">
-        <button class="btn btn-accent" id="btn-load">▶ Video laden</button>
-        <button class="btn btn-danger" id="btn-clear">Löschen</button>
+        <button class="btn btn-accent" id="btn-load" type="button">▶ Video laden</button>
+        <button class="btn btn-danger" id="btn-clear" type="button">Löschen</button>
       </div>
 
       <div id="player-wrap" class="player-wrap" hidden>
@@ -41,16 +41,17 @@
 
       <div class="status" id="status">Bereit</div>
 
-      <details class="bm-box">
-        <summary>Bookmarklet (andere Tabs)</summary>
-        <p class="muted-sm">Code kopieren → Safari Lesezeichen → Adresse ersetzen. Auf einer Seite antippen → Panel erscheint.</p>
-        <textarea id="bm-code" readonly rows="3" class="bm-code"></textarea>
-        <button class="btn btn-block" id="btn-copy-bm">Bookmarklet kopieren</button>
+      <details class="bm-box" open>
+        <summary>Bookmarklet (iPad / andere Tabs)</summary>
+        <ol class="bm-steps">
+          <li>Unten <strong>Bookmarklet kopieren</strong> tippen</li>
+          <li>Safari → Lesezeichen → <strong>neues Lesezeichen</strong></li>
+          <li>Adresse komplett löschen und den kopierten Code einfügen</li>
+          <li>Speichern. Auf einer beliebigen Seite das Lesezeichen antippen → Panel erscheint</li>
+        </ol>
+        <textarea id="bm-code" readonly rows="2" class="bm-code"></textarea>
+        <button class="btn btn-block btn-accent" id="btn-copy-bm" type="button">Bookmarklet kopieren</button>
       </details>
-
-      <p class="limit-box">
-        <strong>Werbung / Skip:</strong> Im Embed-iframe kann kein Skript den YouTube-„Überspringen“-Button drücken (Browser-Sicherheit). Auf youtube.com selbst versucht das Bookmarklet, sichtbare Skip-Buttons zu tippen – Erfolg ist nicht garantiert.
-      </p>
     </div>
   </div>
 
